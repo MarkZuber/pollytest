@@ -1,0 +1,161 @@
+#---------------------------------------------------------------------------
+# Build configuration file
+#---------------------------------------------------------------------------
+
+#
+# The BUILD_TYPE let the user to choose among the available build types.
+# Accepted values are Release and Debug (the uppercase matter).
+# In case no type or a wrong one is set, the default one is Debug.
+#
+
+# BUILD_TYPE=Release
+
+#
+# Using the LIBRARY_TYPE tag one can set the preferred type of library.
+# Accepted values are Static and Shared (the uppercase matter).
+# In case no type or a wrong one is set, the default one is Shared
+#
+
+# LIBRARY_TYPE=Static
+
+#
+# If the ENABLE_DEFAULT tag is set then the build system will create the library
+# for the host system, execute the test and properly extract the documentation.
+#
+
+ENABLE_DEFAULT=YES
+
+#---------------------------------------------------------------------------
+# Android
+#---------------------------------------------------------------------------
+
+#
+# If the ENABLE_ANDROID tag is set to YES then the build system will cross
+# compile for the Android platforms (see the other configuration tags below).
+#
+
+# ENABLE_ANDROID=YES
+
+#
+# Using the ANDROID_NDK_PATH tag one can set the full path to the local
+# directory containing the ndk package provided along with Android.
+#
+
+ANDROID_NDK_PATH=~/android/android-ndk
+
+#
+# The ANDROID_TOOLCHAINS tag contains all the requested targets for which one
+# would like to compile the library. Greater the number of targets, longer the
+# compilation time (mainly the first time).
+#
+
+ANDROID_TOOLCHAINS=(
+#    "android-ndk-r10e-api-16-armeabi-v7a-neon"
+#    "android-ndk-r10e-api-16-x86"
+#    "android-ndk-r10e-api-16-x86-hid"
+#    "android-ndk-r10e-api-19-armeabi-v7a-neon"
+#    "android-ndk-r10e-api-21-arm64-v8a"
+#    "android-ndk-r10e-api-21-arm64-v8a-gcc-49"
+#    "android-ndk-r10e-api-21-arm64-v8a-gcc-49-hid"
+#    "android-ndk-r10e-api-21-armeabi-v7a"
+#    "android-ndk-r10e-api-21-armeabi-v7a-neon"
+#    "android-ndk-r10e-api-21-armeabi"
+#    "android-ndk-r10e-api-21-mips"
+#    "android-ndk-r10e-api-21-mips64"
+#    "android-ndk-r10e-api-21-x86-64"
+#    "android-ndk-r10e-api-21-x86-64-hid"
+#    "android-ndk-r10e-api-21-x86"
+#    "android-ndk-r10e-api-8-armeabi-v7a"
+#    "android-ndk-r11c-api-16-armeabi-v7a-neon"
+#    "android-ndk-r11c-api-16-x86"
+#    "android-ndk-r11c-api-16-x86-hid"
+#    "android-ndk-r11c-api-19-armeabi-v7a-neon"
+#    "android-ndk-r11c-api-21-arm64-v8a"
+#    "android-ndk-r11c-api-21-arm64-v8a-gcc-49"
+#    "android-ndk-r11c-api-21-arm64-v8a-gcc-49-hid"
+#    "android-ndk-r11c-api-21-armeabi-v7a"
+#    "android-ndk-r11c-api-21-armeabi-v7a-neon"
+#    "android-ndk-r11c-api-21-armeabi"
+#    "android-ndk-r11c-api-21-mips"
+#    "android-ndk-r11c-api-21-mips64"
+#    "android-ndk-r11c-api-21-x86-64"
+#    "android-ndk-r11c-api-21-x86-64-hid"
+#    "android-ndk-r11c-api-21-x86"
+#    "android-ndk-r11c-api-8-armeabi-v7a"
+)
+
+#---------------------------------------------------------------------------
+# Apple
+#---------------------------------------------------------------------------
+
+#
+# If the ENABLE_APPLE tag is set to YES then the build system will cross
+# compile for the Apple platforms (see the other configuration tags below).
+#
+
+# ENABLE_APPLE=YES
+
+#
+# If the IOS_SIM tag is set to YES then the build system is forced to use an
+# architecture suitable for the iOS simulator (usually i386).
+#
+
+# IOS_SIM=YES
+
+#
+# The APPLE_TOOLCHAINS tag contains all the requested targets for which one
+# would like to compile the library. Greater the number of targets, longer the
+# compilation time (mainly the first time).
+#
+
+APPLE_TOOLCHAINS=(
+#    "ios-7-0"
+#    "ios-7-1"
+#    "ios-8-0"
+#    "ios-8-1"
+#    "ios-8-2-arm64"
+#    "ios-8-2-arm64-hid"
+#    "ios-8-2"
+#    "ios-8-2-cxx98"
+#    "ios-8-2-i386-arm64"
+#    "ios-8-4-arm64"
+#    "ios-8-4-armv7"
+#    "ios-8-4-armv7s"
+#    "ios-8-4"
+#    "ios-8-4-hid"
+#    "ios-9-0-armv7"
+#    "ios-9-0"
+#    "ios-9-0-dep-7-0-armv7"
+#    "ios-9-0-i386-armv7"
+#    "ios-9-0-wo-armv7s"
+#    "ios-9-1-arm64"
+#    "ios-9-1-armv7"
+#    "ios-9-1"
+#    "ios-9-1-dep-7-0-armv7"
+#    "ios-9-1-dep-8-0-hid"
+#    "ios-9-1-hid"
+#    "ios-9-2-arm64"
+#    "ios-9-2-armv7"
+#    "ios-9-2"
+#    "ios-9-3-arm64"
+#    "ios-9-3-armv7"
+#    "ios-9-3"
+#    "ios-nocodesign-9-1-arm64"
+#    "ios-nocodesign-9-1-armv7"
+#    "ios-nocodesign-9-1"
+#    "ios-nocodesign-9-2-arm64"
+#    "ios-nocodesign-9-2-armv7"
+#    "ios-nocodesign-9-2"
+#    "ios-nocodesign-9-3-arm64"
+#    "ios-nocodesign-9-3-armv7"
+#    "ios-nocodesign-9-3"
+#    "ios-nocodesign-arm64"
+#    "ios-nocodesign-armv7"
+#    "ios-nocodesign"
+#    "osx-10-10-dep-10-7"
+#    "osx-10-10"
+#    "osx-10-11"
+#    "osx-10-7"
+#    "osx-10-8"
+#    "osx-10-9"
+)

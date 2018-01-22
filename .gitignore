@@ -1,0 +1,6 @@
+# QtCreator
+*.user
+
+# build stuff
+config.build*
+!config.build.example
