@@ -2,5 +2,5 @@
 *.user
 
 # build stuff
-config.build*
-!config.build.example
+# config.build*
+# !config.build.example
